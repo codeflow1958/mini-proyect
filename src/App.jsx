@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Navegacion from "./componentes/navegacion";
+import Card from "./componentes/Card";
 Navegacion
+Card
 
 function App() {
   // La variable data es la que va a almacenar los datos de "stays.json" y setData nos ayudará a guardar esos datos en esa variable. Es necesario que inicialicemos esa variable como un array vacío para evitar errores.
@@ -55,13 +57,7 @@ function App() {
         {filtered.map((el, i) => {
           return <> 
            <div key={i} className="tarjeta">
-            <div className="contimg">
-              <img src={el.photo} alt= {el.title} />
-            </div>
-          
-            <div className="textd">
-               <h1>{el.maxGuests}</h1>
-            </div>
+            <Card link={el.photo} title={el.title} ></Card>
            
 
           
