@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Navegacion from "./componentes/navegacion";
 import Card from "./componentes/Card";
-Navegacion
-Card
+import Navegacion from "./componentes/Navegacion";
+Navegacion;
+Card;
 
 function App() {
   // La variable data es la que va a almacenar los datos de "stays.json" y setData nos ayudará a guardar esos datos en esa variable. Es necesario que inicialicemos esa variable como un array vacío para evitar errores.
   const [data, setData] = useState([]);
-  const [filtered, setFiltered] = useState ([])
+  const [filtered, setFiltered] = useState([]);
 
   // Función para traer los datos de "stays.json".
   const getData = async () => {
@@ -32,40 +32,47 @@ function App() {
   // Puedes ver la variable data en consola.
   console.log(data);
 
-  const filtrarD = (text) =>{
-   const dataFiltered = data.filter(element => element.maxGuests >= parseInt(text))
+  const filtrarD = (text) => {
+    const dataFiltered = data.filter(
+      (element) => element.maxGuests >= parseInt(text)
+    );
 
-   return dataFiltered
-  }
-    
-  const manejador = (e) =>{
-    e.preventDefault()
-    const text = e.target[0].value
-    const resultfiltrado = filtrarD(text) 
-    setFiltered(resultfiltrado)
+    return dataFiltered;
+  };
 
-  }
+  const manejador = (e) => {
+    e.preventDefault();
 
+    const text = e.target[0].value;
+    const resultfiltrado = filtrarD(text);
+    setFiltered(resultfiltrado);
+  };
 
   return (
     <>
-      <Navegacion fn={manejador}  ></Navegacion>
+      <div className="contenedor">
+        <Navegacion fn={manejador}></Navegacion>
+      </div>
+
       <main>
-
-
         {/* Aquí te dejo un ejemplo de cómo podrías imprimir varios elementos a la vez. */}
         {filtered.map((el, i) => {
-          return <> 
-           <div key={i} className="tarjeta">
-            <Card link={el.photo} title={el.title} ></Card>
-           
-
-          
-          
-          </div>
-          </> 
+          return (
+            <>
+              <div key={i} className="tarjeta">
+                <Card
+                  link={el.photo}
+                  title={el.title}
+                  type={el.type}
+                  camas={el.beds}
+                  super={el.superHost}
+                  rti={el.rating}
+                ></Card>
+              </div>
+            </>
+          );
         })}
-      </main >
+      </main>
     </>
   );
 }

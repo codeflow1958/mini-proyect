@@ -14,6 +14,10 @@
 
 
 }
+div {
+    border-radius: 25px;
+    
+}
 
 main{
     min-height: 100%;
@@ -26,15 +30,16 @@ main{
 
 .tarjeta{
     overflow: hidden;
-    height: 300px;
-    width: 200px;
-    border: 1px solid gray;
+    height: 500px;
+    width: 405px;
+    border: none;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
 }
 
 .contimg{
+    overflow: hidden;
     height: 70%;
     width: 100%;
 }
@@ -46,8 +51,70 @@ main{
 }
 .textd{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 5%;
+
+}
+.contenidoTxt{
+margin-top: 5%;
+}
+
+.arriba{
+    display: flex;
+    
+    justify-content: space-between;
+    height: 30px;
+    width: 400px;
+
+}
+
+.super{
+    border: solid gray;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row; 
     justify-content: center;
     align-items: center;
+    width: 50%;
+    white-space: nowrap;
+    font-size: small;
+}
+.rtr{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    white-space: break-word;
+}
+.type{
+    display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        white-space: nowrap;
+       
+}
+.camas{
+    display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        white-space: nowrap
+}
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.contenedor2{
+    display: flex;
+}
 
+#nav{
+    color: red;
 }
