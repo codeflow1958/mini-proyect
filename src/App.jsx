@@ -42,6 +42,13 @@ function App() {
 
   const manejador = (e) => {
     e.preventDefault();
+
+    const ver = document.getElementById("b");
+    if (data.beds == null) {
+      ver.classList.add("no");
+    } else {
+      ver.classList.remove("no");
+    }
     const text = e.target[0].value;
     const resultfiltrado = filtrarD(text);
     setFiltered(resultfiltrado);
@@ -49,14 +56,23 @@ function App() {
 
   return (
     <>
-      <Navegacion fn={manejador}></Navegacion>
+      <div className="contenedor">
+        <Navegacion fn={manejador}></Navegacion>
+      </div>
+
       <main>
         {/* Aquí te dejo un ejemplo de cómo podrías imprimir varios elementos a la vez. */}
         {filtered.map((el, i) => {
           return (
             <>
               <div key={i} className="tarjeta">
-                <Card link={el.photo} title={el.title}></Card>
+                <Card
+                  link={el.photo}
+                  title={el.title}
+                  type={el.type}
+                  camas={el.beds}
+                  rti={el.rating}
+                ></Card>
               </div>
             </>
           );
