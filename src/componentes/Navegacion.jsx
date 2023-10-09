@@ -6,8 +6,8 @@ export default function Navegacion(props) {
       <div>
         <nav class="navbar bg-body-tertiary">
           <div class="container-fluid contenedor2">
-            <a class="navbar-brand " id="nav1">
-              Navbar
+            <a class="navbar-brand " id="nav1" src="./img/logo.png ">
+              windbnb
             </a>
             <form class="d-flex " role="search" onSubmit={props.fn}>
               <input
