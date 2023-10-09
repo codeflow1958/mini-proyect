@@ -115,6 +115,6 @@ margin-top: 5%;
     display: flex;
 }
 
-button{
-    background-color: red;
+#nav{
+    color: red;
 }

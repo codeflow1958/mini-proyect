@@ -1,5 +1,5 @@
 import React from "react";
-
+// mi app te da la opcion de la buscar por invitados teda las avitaciones iguales o mas
 export default function Navegacion(props) {
   return (
     <>
