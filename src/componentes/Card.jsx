@@ -9,11 +9,19 @@ export default function Card(props) {
 
       <div className="contenidoTxt">
         <div className="arriba">
-          <div className="super"> SUPER HOST</div>
+          <div>
+            <span>
+              {props.super == true ? (
+                <spa className="cards">Superhost </spa>
+              ) : (
+                ""
+              )}
+            </span>
+          </div>
 
           <div className="type">{props.type}.</div>
-          <div className="camas " id="b">
-            {props.camas} beds
+          <div className="camas">
+            <span> {props.camas == null ? "" : `${props.camas} beds`} </span>
           </div>
 
           <div className="rtr">

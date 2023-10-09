@@ -43,12 +43,6 @@ function App() {
   const manejador = (e) => {
     e.preventDefault();
 
-    const ver = document.getElementById("b");
-    if (data.beds == null) {
-      ver.classList.add("no");
-    } else {
-      ver.classList.remove("no");
-    }
     const text = e.target[0].value;
     const resultfiltrado = filtrarD(text);
     setFiltered(resultfiltrado);
@@ -71,6 +65,7 @@ function App() {
                   title={el.title}
                   type={el.type}
                   camas={el.beds}
+                  super={el.superHost}
                   rti={el.rating}
                 ></Card>
               </div>
