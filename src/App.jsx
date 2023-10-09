@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-
 import Card from "./componentes/Card";
 import Navegacion from "./componentes/Navegacion";
 Navegacion;
