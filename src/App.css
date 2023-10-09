@@ -114,6 +114,7 @@ margin-top: 5%;
 .contenedor2{
     display: flex;
 }
-.no{
-    display: none;
+
+button{
+    background-color: red;
 }

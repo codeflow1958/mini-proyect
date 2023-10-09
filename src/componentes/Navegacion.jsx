@@ -6,7 +6,9 @@ export default function Navegacion(props) {
       <div>
         <nav class="navbar bg-body-tertiary">
           <div class="container-fluid contenedor2">
-            <a class="navbar-brand">Navbar</a>
+            <a class="navbar-brand " id="nav1">
+              Navbar
+            </a>
             <form class="d-flex " role="search" onSubmit={props.fn}>
               <input
                 className="form-control me-2"
@@ -14,7 +16,7 @@ export default function Navegacion(props) {
                 placeholder="gueses"
                 aria-label="Search"
               />
-              <button class="btn btn-primary" type="submit">
+              <button class="btn btn-danger" type="submit">
                 Search
               </button>
             </form>
